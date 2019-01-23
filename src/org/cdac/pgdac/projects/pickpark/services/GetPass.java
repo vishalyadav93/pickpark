@@ -28,6 +28,7 @@ public class GetPass extends HttpServlet{
 protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 		throws ServletException, IOException {
 	Pass pass= new Pass();
+	
 	String str=req.getReader().lines().collect(Collectors.joining());
 	try {
 		JSONObject jsonObject= new JSONObject(str);
